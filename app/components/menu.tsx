@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 const menuItems = [
   {
@@ -32,7 +31,6 @@ const menuItems = [
 ];
 
 const Menu = () => {
-  const router = useRouter();
 
 
   return (
