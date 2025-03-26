@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Menu from "./components/menu";
 
 
 export const metadata: Metadata = {
@@ -14,10 +15,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        
-      >
-        {children}
+      <body>
+        <div className="h-screen flex">
+          <div className="w-[14%] md:w-[8%] lg:w-[16%] xl:w[14%] p-4">
+          <Menu />
+
+          </div>
+        <div className="w-[86%] md:w-[92%] lg:w-[84%] xl-w-[86%] bg-[#F7F8FA] overflow-scroll flex flex-col">{children}</div>
+        </div>
       </body>
     </html>
   );
